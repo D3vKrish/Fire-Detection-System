@@ -1,6 +1,6 @@
-# 🔥 Fire Detection System
+# Fire Detection System
 
-## 🚀 Overview
+## Overview
 
 This project implements a **real-time fire detection system** using both:
 - **Environmental sensors** for physical indicators (gas, temperature, flame)
@@ -10,7 +10,7 @@ By combining the two, we create a **robust hybrid system** ideal for indoor envi
 
 ---
 
-## 🧰 Tools & Hardware
+## Tools & Hardware
 
 - **Edge Impulse Studio** — Train and deploy the image classification model
 - **Arduino IDE** — Program and flash ESP32 & ESP32-CAM
@@ -20,7 +20,7 @@ By combining the two, we create a **robust hybrid system** ideal for indoor envi
 
 ---
 
-## 🛠️ Sensors Used
+## Sensors Used
 
 | Sensor       | Purpose                            |
 |--------------|-------------------------------------|
@@ -33,7 +33,7 @@ By combining the two, we create a **robust hybrid system** ideal for indoor envi
 
 ---
 
-## 📷 Machine Learning
+## Machine Learning
 
 We trained a custom **image classification model** with:
 - `fire`
@@ -44,26 +44,17 @@ This model was deployed to the **ESP32-CAM** using Edge Impulse, enabling on-dev
 
 ---
 
-## 🔄 System Flow
+## System Flow
 
 1. **Sensors & camera** continuously collect data
 2. **Sensor thresholds** are checked
 3. **ML model** classifies the scene
-4. If **either** sensor triggers or ML classifies fire → fire is flagged
+4. If **either** sensor triggers or ML classifies fire, fire is flagged and led/buzzer is switched on
 5. Serial output displays full readings and classification
 
 ---
 
-## ⚡ What We Demonstrate
-
-- A complete hybrid fire detection system
-- Reduced false positives using sensor fusion + ML
-- Embedded AI on low-power microcontrollers
-- Real-time logging and feedback via Serial
-
----
-
-## 📚 Libraries Used
+## Libraries Used
 
 - `Wire.h` — I2C communication
 - `Adafruit_MLX90614.h` — MLX90614 IR temperature sensor
@@ -74,18 +65,3 @@ This model was deployed to the **ESP32-CAM** using Edge Impulse, enabling on-dev
 - `Indoor-fire_ML_model_inferencing.h` — Edge Impulse model header
 
 ---
-
-## 🧠 Embedded Intelligence
-
-This project showcases how **embedded ML + sensor fusion** can create intelligent safety systems that:
-- Don’t rely on internet/cloud
-- Run efficiently on microcontrollers
-- Are cost-effective and portable
-
----
-
-## 🧩 Future Improvements
-
-- Add alert system (buzzer, LEDs, wireless messaging)
-- Cloud logging via MQTT or Firebase
-- Real-time dashboard for monitoring
